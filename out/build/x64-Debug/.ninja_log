@@ -1,0 +1,13 @@
+# ninja log v5
+0	245	607102417	CMakeFiles/CMakeProject2.dir/CMakeProject2.cpp.obj	1c0d3c8ebf983b13
+253	438	607102417	CMakeProject2.exe	be99b390b4ad645
+0	266	607102770	CMakeFiles/CMakeProject2.dir/answer/DoublePointer.cpp.obj	b40c7831a13393af
+266	389	607102770	CMakeProject2.exe	85a1172fca9bd91
+0	6	0	clean	b049eaf95b698d8c
+3	266	607102791	CMakeFiles/CMakeProject2.dir/answer/DoublePointer.cpp.obj	b40c7831a13393af
+0	5	0	clean	b049eaf95b698d8c
+3	260	607102810	CMakeFiles/CMakeProject2.dir/answer/DoublePointer.cpp.obj	b40c7831a13393af
+0	6	0	clean	b049eaf95b698d8c
+3	259	607102819	CMakeFiles/CMakeProject2.dir/answer/DoublePointer.cpp.obj	b40c7831a13393af
+1	297	607102819	CMakeFiles/CMakeProject2.dir/CMakeProject2.cpp.obj	1c0d3c8ebf983b13
+298	399	607102819	CMakeProject2.exe	85a1172fca9bd91
