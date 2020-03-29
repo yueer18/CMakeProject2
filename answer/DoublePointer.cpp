@@ -133,3 +133,28 @@ string Answer::reverseVowels(string s)
 
 	return s;
 }
+
+bool Answer::validPalindrome(string s)
+{
+	if (s.size() <= 2) return true;
+
+	int l = 0, r = s.size() - 1;
+	while (l < r) {
+		if (s[l] != s[r]) {
+			return isPalindrome(s, l + 1, r) || isPalindrome(s, l, r-1);
+		}
+		l++;
+		r--;
+	}
+	return true;
+}
+
+void Answer::merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
+{
+	int i = m - 1, j = n - 1, k = m + n - 1;
+	while (i >= 0 && j >= 0) {
+		if (nums1[i] > nums2[j]) nums1[k--] = nums1[i--];
+		else nums1[k--] = nums2[j--];
+	}
+	while (j >= 0) nums1[k--] = nums2[j--];
+}

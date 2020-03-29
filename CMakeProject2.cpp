@@ -76,11 +76,26 @@ void test_345()
 	cout << A.reverseVowels("leetcode") << endl;
 }
 
+void test_680()
+{
+	Answer A(vector<int>{});
+	cout << A.validPalindrome("leetcode") << endl;
+}
+void test_88()
+{
+	vector<int> nums1 = { 1,2,3,0,0,0};
+	vector<int> nums2 = { 2,5,6};
+	Answer A(vector<int>{});
+	A.merge(nums1, 3, nums2, 3);
+}
+
 int main()
 {
+	test_88();
 //	test_167();
-	test_345();
+//	test_345();
 //	test_633();
+//	test_680();
 
 	return 0;
 }
