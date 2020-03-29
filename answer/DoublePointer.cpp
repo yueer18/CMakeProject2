@@ -1,5 +1,6 @@
 ﻿#include "DoublePointer.h"
 #include <iostream>
+#include <set>
 using namespace std;
 
 int Answer::count = 0;
@@ -90,4 +91,45 @@ bool Answer::judgeSquareSum(int c)
 			left++;
 	}
 	return false;
+}
+
+
+/*345
+Given s = "leetcode", return "leotcede".
+
+使用双指针，一个指针从头向尾遍历，一个指针从尾到头遍历，
+当两个指针都遍历到元音字符时，交换这两个元音字符。
+
+为了快速判断一个字符是不是元音字符，我们将全部元音字符
+添加到集合 HashSet 中，从而以 O(1) 的时间复杂度进行该操作。
+
+时间复杂度为 O(N)：只需要遍历所有元素一次
+空间复杂度 O(1)：只需要使用两个额外变量
+*/
+
+string Answer::reverseVowels(string s)
+{
+	if(s.size() <= 1) return s;
+	
+	string a = "aeiouAEIOU";
+
+	int l = 0, r = s.size() - 1;
+	
+	while (l < r) {
+		if (a.find(s[l]) == -1)
+		{
+			l++;
+
+		}
+		else if (a.find(s[r]) == -1)
+		{
+			r--;
+
+		}
+		else {
+			swap(s[l++], s[r--]);
+		}
+	}
+
+	return s;
 }

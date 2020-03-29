@@ -70,10 +70,17 @@ void test_633()
 	cout << A.judgeSquareSum(4) << endl;
 }
 
+void test_345() 
+{
+	Answer A(vector<int>{});
+	cout << A.reverseVowels("leetcode") << endl;
+}
+
 int main()
 {
 //	test_167();
-	test_633();
+	test_345();
+//	test_633();
 
 	return 0;
 }
