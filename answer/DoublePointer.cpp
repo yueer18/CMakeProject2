@@ -158,3 +158,40 @@ void Answer::merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
 	}
 	while (j >= 0) nums1[k--] = nums2[j--];
 }
+
+bool Answer::hasCycle(ListNode* head)
+{
+	ListNode* faptr = head;
+	ListNode* slptr = head;
+	while (faptr != nullptr && faptr->next != nullptr)
+	{
+		faptr = faptr->next->next;
+		slptr = slptr->next;
+		if (faptr == slptr) return true;
+	}
+	return false;
+}
+
+string Answer::findLongestWord(string s, vector<string>& d)
+{
+		//定义变量储存最大值
+		string longestStr = "";
+		//遍历容器
+		for (int i = 0; i < d.size(); i++) {
+			//如果比当前最长已经匹配的单词还短，一定不是
+			if (longestStr.size() > d[i].size()) {
+				continue;
+			}
+			//如果一样长，//且更大，一定不是
+			if (d[i].size() == longestStr.size() && longestStr.compare(d[i]) < 0) {
+				continue;
+			}
+			//如果是子序列，储存最大
+			if (SubString(s, d[i])) {
+				longestStr = d[i];
+			}
+		}
+		return longestStr;
+
+
+}
